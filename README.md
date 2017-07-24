@@ -1,3 +1,10 @@
+<h1> Udacity Full-Stack Developer Nanodegree Program Linux Server Project</h1>
+
+Online at http://35.163.87.91/
+
+SSH at ssh -i (add key here) grader@35.163.87.91 -p 2200
+
+
 <h1>Get your server.</H1>
 
 <h3>1. Start a new Ubuntu Linux server instance on Amazon Lightsail. There are full details on setting up your Lightsail instance on the next page.</h3>
