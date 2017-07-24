@@ -1,5 +1,7 @@
-Get your server.
-1. Start a new Ubuntu Linux server instance on Amazon Lightsail. There are full details on setting up your Lightsail instance on the next page.
+<H1>Udacity Linux Server Project</h1>
+
+<H3>Get your server.<h3>
+<b>1. Start a new Ubuntu Linux server instance on Amazon Lightsail. There are full details on setting up your Lightsail instance on the next page.<b>
 
 Created using Amazon Lightsail
 
