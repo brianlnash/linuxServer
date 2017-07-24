@@ -150,3 +150,8 @@ from FlaskApp import app as application
 application.secret_key = '(enter secret key here)'
 
 # linuxServer
+
+
+<h3> Resources</h3>
+https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+http://wsgi.readthedocs.io/en/latest/
