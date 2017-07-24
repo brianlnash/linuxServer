@@ -1,26 +1,25 @@
-<H1>Udacity Linux Server Project</h1>
+<h1>Get your server.</H1>
 
-<H3>Get your server.<h3>
-<b>1. Start a new Ubuntu Linux server instance on Amazon Lightsail. There are full details on setting up your Lightsail instance on the next page.<b>
+<h3>1. Start a new Ubuntu Linux server instance on Amazon Lightsail. There are full details on setting up your Lightsail instance on the next page.</h3>
 
 Created using Amazon Lightsail
 
-2. Follow the instructions provided to SSH into your server.
+<h3>2. Follow the instructions provided to SSH into your server.</H3>
 
 ssh -i ubuntu@35.163.87.91
 
-Secure your server.
-3. Update all currently installed packages.
+<h1>Secure your server.</h1>
+<h3>3. Update all currently installed packages.</h3>
 
 sudo apt-get update
 sudo apt-get upgrade
 
-4. Change the SSH port from 22 to 2200. Make sure to configure the Lightsail firewall to allow it.
+<h3>4. Change the SSH port from 22 to 2200. Make sure to configure the Lightsail firewall to allow it.</h3>h3>
 
 Changed initially on Amazon Lightsail
 Additional change made through sudo nano /etc/ssh/sshd_config
 
-5. Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).
+<h3>5. Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).</h3>
 
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
@@ -33,38 +32,38 @@ sudo ufw enable
 Warning: When changing the SSH port, make sure that the firewall is open for port 2200 first, so that you don't lock yourself out of the server. Review this video for details! When you change the SSH port, the Lightsail instance will no longer be accessible through the web app 'Connect using SSH' button. The button assumes the default port is being used. There are instructions on the same page for connecting from your terminal to the instance. Connect using those instructions and then follow the rest of the steps.
 
 
-Give grader access.
+<h1>Give grader access.</h1>
 In order for your project to be reviewed, the grader needs to be able to log in to your server.
 
-6. Create a new user account named grader.
+<h3>6. Create a new user account named grader.</h3>
 
 sudo adduser grader
 add password and left remaining fields blank
 
-7. Give grader the permission to sudo.
+<h3>7. Give grader the permission to sudo.</h3>
 
 sudo nano /etc/sudoers.d/grader ALL= (ALL:ALL) ALL
 
-8. Create an SSH key pair for grader using the ssh-keygen tool.
+<h3>8. Create an SSH key pair for grader using the ssh-keygen tool.</h3>
 
 ssh-keygen
 cp ~/linuxCourse.pub /home/grader/.ssh/authorized_keys
 
-Prepare to deploy your project.
-9. Configure the local timezone to UTC.
+<h1>Prepare to deploy your project.</h1>
+<h3>9. Configure the local timezone to UTC.</h3>
 
 time  (this was already set properly)
 
-10. Install and configure Apache to serve a Python mod_wsgi application.
+<h3>10. Install and configure Apache to serve a Python mod_wsgi application.</h3>
 
 sudo apt-get install apache2
 sudo apt-get install libapache2-mod-wsgi python-dev
 
-11. Install and configure PostgreSQL:
+<h3>11. Install and configure PostgreSQL:</h3>
 
 sudo apt-get install poatgresql postgresql-contrib
 
-Do not allow remote connections
+<h1>Do not allow remote connections</h1>
 
 Create a new database user named catalog that has limited permissions to your catalog application database.
 
@@ -88,12 +87,12 @@ Exit from user "postgres"
 
 exit
 
-12. Install git.
+<h3>12. Install git.</h3>
 
 sudo apt-get install git
 
-Deploy the Item Catalog project.
-13. Clone and setup your Item Catalog project from the Github repository you created earlier in this Nanodegree program.
+<h1>Deploy the Item Catalog project.</h1>
+<h3>13. Clone and setup your Item Catalog project from the Github repository you created earlier in this Nanodegree program.</h3>
 
 Use cd /var/www to move to the /var/www directory
 Create the application directory sudo mkdir FlaskApp
@@ -111,7 +110,7 @@ install PIP
 
 sudo apt-get install pip
 
-14. Set it up in your server so that it functions correctly when visiting your server’s IP address in a browser. Make sure that your .git directory is not publicly accessible via a browser!
+<h3>14. Set it up in your server so that it functions correctly when visiting your server’s IP address in a browser. Make sure that your .git directory is not publicly accessible via a browser!</h3>
 
 Create FlaskApp.conf:
 
